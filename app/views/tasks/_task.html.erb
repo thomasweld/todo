@@ -1,0 +1,13 @@
+
+
+
+<div class="row">
+	<div class="well">
+
+		<h3><%= task.description %></h3>
+		<p><%= task.deadline.strftime('%B %d, %Y') %></p>
+		<p><%= link_to "Edit", edit_task_path(task), remote: true %>
+		<%= link_to "Delete", task, remote: true, method: :delete, data: { confirm: 'Are you sure you want to obliterate?' } %></p>
+		
+	</div>
+</div>
